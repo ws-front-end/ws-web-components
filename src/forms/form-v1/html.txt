@@ -1,0 +1,15 @@
+<div class="ws--block">
+    <h2 class="section-title">Vormi pealkiri</h2>
+
+    <label>[textarea* your-message x1 placeholder "Päring / küsimus"]</label>
+
+    <label>[email* your-email placeholder "E-post"]</label>
+
+    <label>[text* your-name placeholder "Nimi"] </label>
+
+    [acceptance your-consent]Nõustun <a target="_blank" href="http://arendus.wsys.ee/viimsikool/privacy-policy/">andmekasutuseeskirjadega</a> [/acceptance]
+
+    <div class="wpc7-submit-container">
+        [submit "Saada"]
+    </div>
+</div>

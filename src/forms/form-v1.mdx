@@ -1,0 +1,29 @@
+---
+name: Form style v1
+menu: Forms
+---
+
+import { Content } from "./form-v1/form-v1";
+import Layout from "../custom-components/custom-playground";
+import imageUrl from "./form-v1/images/form-v1.jpg";
+import html from "raw-loader!./form-v1/html.txt";
+import css from "raw-loader!./form-v1/css.txt";
+
+# Form style v1
+
+## Used:
+
+- [Siseekspert](https://arendus.wsys.ee/siseekspert/kontakt/)
+- [Viimsikool](https://arendus.wsys.ee/viimsikool/test/)
+
+## Demo
+
+<section class="entry-content">
+  <img src={imageUrl} alt="Image alt" />
+</section>
+
+## SCSS / JS / HTML
+
+Use this component Html inside Contact Form 7 plugin.
+
+<Layout css={<code>{css}</code>}js={<code>none</code>}html={<code>{html}</code>}/>

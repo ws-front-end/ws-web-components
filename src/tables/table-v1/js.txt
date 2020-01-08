@@ -1,0 +1,117 @@
+//import DataTable from 'vanilla-datatables';
+
+class DataTableController {
+  constructor(tableElement, id) {
+    this.dataTable = new DataTable(tableElement, {
+      perPage: 5,
+      searchable: false,
+      // Pagination
+      nextPrev: true,
+      firstLast: false,
+      fixedColumns: false,
+
+      // Customise the display text
+      labels: {
+        placeholder: 'Otsi...', // The search input placeholder
+        perPage: 'Näita lehel{select}', // per-page dropdown label
+        noRows: 'Sisu puudub', // Message shown when there are no search results
+        info: '', //
+      },
+
+      // Customise the layout
+      layout: {
+        top: '{select}',
+        bottom: '{pager}',
+      },
+    });
+    this.id = id;
+    this.dataTable.on('datatable.init', () => {
+      this.createSelect();
+    });
+    this.currentSort = {
+      column: 1,
+      direction: 'ascending',
+    };
+    this.dataTable.on('datatable.sort', (column, direction) => {
+      this.currentSort.column = column;
+      this.currentSort.direction = direction;
+    });
+    this.dataTable.columns().sort(1, 'ascending');
+  }
+
+  createSelect() {
+    const theParent = this.dataTable.wrapper.querySelector('.dataTable-top');
+    const theContainer = document.createElement('div');
+    theContainer.classList.add('custom-select');
+    theParent.insertBefore(theContainer, theParent.firstChild);
+    // Create array of options to be added
+    const headings = this.dataTable.headings.map(heading => heading.innerText);
+
+    // Create and append select list
+    const selectList = document.createElement('select');
+    selectList.id = `ws_custom_select_${this.id}`;
+    selectList.classList.add('dataTable-top--custom__sort');
+    theContainer.insertBefore(selectList, theContainer.firstChild);
+
+    // Create and append the options
+    const optionReadOnly = document.createElement('option');
+    optionReadOnly.value = 'readonly';
+    optionReadOnly.text = 'Sorteeri tabelit';
+    selectList.appendChild(optionReadOnly);
+
+    headings.forEach((element, key) => {
+      const optionAsc = document.createElement('option');
+      optionAsc.value = `${key}_ascending`;
+      optionAsc.text = `${element} A-Z`;
+      selectList.appendChild(optionAsc);
+
+      const optionDesc = document.createElement('option');
+      optionDesc.value = `${key}_descending`;
+      optionDesc.text = `${element} Z-A`;
+      selectList.appendChild(optionDesc);
+    });
+
+    selectList.addEventListener('change', e => {
+      e.preventDefault();
+      this.triggerSort(e.currentTarget.options[e.currentTarget.selectedIndex].value);
+    });
+
+    this.movePerPage(theParent);
+  }
+
+  triggerSort(column) {
+    if (column === 'readonly' && this.currentSort.column !== 1) {
+      this.dataTable.columns().sort(1, 'ascending');
+      return;
+    }
+    const columnData = column.split('_');
+    if (
+      parseInt(columnData[0], 10) !== this.currentSort.column ||
+      this.currentSort.direction !== columnData[1]
+    ) {
+      this.dataTable.columns().sort(parseInt(columnData[0], 10) + 1, columnData[1]);
+    }
+  }
+
+  movePerPage(theParent) {
+    const container = theParent.querySelector('.dataTable-dropdown');
+
+    const customContainer = document.createElement('div');
+    customContainer.classList.add('custom-select');
+    container.append(customContainer);
+
+    const select = container.querySelector('select');
+    select.setAttribute('id', `postsperpage_${this.id}`);
+    customContainer.insertBefore(select, customContainer.firstChild);
+
+    const label = container.querySelector('label');
+    label.setAttribute('for', `postsperpage_${this.id}`);
+  }
+}
+const tables = document.querySelectorAll('table');
+
+if (tables.length) {
+  tables.forEach((table, key) => {
+    new DataTableController(table, key);
+  });
+}

@@ -1,0 +1,86 @@
+.custom-playground {
+  .react-tabs__tab-list {
+    margin-bottom: 0;
+    padding-left: 0;
+    display: flex;
+
+    li {
+      list-style: none;
+      cursor: pointer;
+      padding: 0.4rem 1.5rem;
+      border-radius: 0.3rem 0.3rem 0 0;
+    }
+  }
+
+  .css,
+  .js,
+  .html {
+    position: relative;
+
+    > button {
+      position: absolute;
+      right: 3.2rem;
+      border: none;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0 0 0.3rem 0.3rem;
+      cursor: pointer;
+
+      i {
+        pointer-events: none;
+      }
+    }
+
+    pre {
+      margin-top: 0;
+      border-radius: 0 0 0.4rem 0.4rem;
+    }
+  }
+}
+
+// Light Theme
+.css-1ouyflx {
+  .custom-playground {
+    .react-tabs__tab-list {
+      li {
+        background-color: #ced4de;
+
+        &.react-tabs__tab--selected {
+          background-color: #f6f8fa;
+        }
+      }
+    }
+
+    .css,
+    .js,
+    .html {
+      > button {
+        background-color: #ced4de;
+        color: #67788a;
+      }
+    }
+  }
+}
+
+// Dark Theme
+.css-1v5src1 {
+  .custom-playground {
+    .react-tabs__tab-list {
+      li {
+        background-color: #2d3747;
+
+        &.react-tabs__tab--selected {
+          background-color: rgb(19, 22, 31);
+        }
+      }
+    }
+
+    .css,
+    .js,
+    .html {
+      > button {
+        background-color: #2d3747;
+        color: #67788a;
+      }
+    }
+  }
+}

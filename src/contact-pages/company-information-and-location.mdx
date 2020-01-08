@@ -1,0 +1,53 @@
+---
+name: Company information and location.
+menu: Contact Pages
+---
+
+import { Playground } from "docz";
+import { Contact } from "./company-information-and-location/contact";
+import Layout from "../custom-components/custom-playground";
+import css from "raw-loader!./company-information-and-location/css.txt";
+
+# Company information and location.
+
+## Used:
+
+- [Horizonbag](https://arendus.wsys.ee/horizonbag/kontakt)
+
+## Demo
+
+<Playground>
+<section class="contact__location">
+    <div class="contact__location__info">
+        <h4>Company Name AS</h4>
+        
+        <ul>
+            <li>
+                <a href="tel:(+372) 123 45678">
+                <i class="fas fa-phone-alt"></i>
+                    (+372) 123 45678</a>
+            </li>
+            <li>
+                <a href="mailto:info@company.ee">
+                <i class="fab fa-telegram-plane"></i>
+                    info@company.ee</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://googl/maps/">
+                <i class="fas fa-map-marker-alt"></i>
+                    Location 10, 74305 Estonia</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="contact__location__map">
+          <img src="https://via.placeholder.com/500" alt="Location image"></img>
+    </div>
+</section>
+</Playground>
+
+## SCSS / JS / HTML
+
+<Layout css={<code>{css}</code>}js={<code>none</code>}/>
+
+

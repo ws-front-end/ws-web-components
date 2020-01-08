@@ -1,0 +1,116 @@
+.wp-block-table {
+    overflow: hidden;
+    margin: 4rem 0;
+
+    .dataTable-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .custom-select {
+            position: relative;
+
+            &:after {
+                pointer-events: none;
+                content: '›';
+                transform: rotate(90deg);
+                display: inline-block;
+                font-size: 2rem;
+                font-weight: bold;
+                position: absolute;
+                top: 1.2rem;
+                right: 2rem;
+
+                @include small {
+                    right: 1.5rem;
+                }
+            }
+
+            select {
+                width: 100%;
+                color: $color-link;
+                border: 0.1rem solid $color-blue;
+                border-radius: 3rem;
+                padding: 1.3rem 2.5rem;
+                font-weight: bold;
+                font-size: 1.6rem;
+                padding-right: 5rem;
+                -webkit-user-select: none;
+                -moz-user-select: -moz-none;
+                -ms-user-select: none;
+                user-select: none;
+                -webkit-appearance: none;
+                -moz-appearance: radio-container;
+                appearance: none;
+
+                @include small {
+                    padding: 1.3rem 2rem;
+                    padding-right: 3rem;
+                }
+            }
+        }
+
+        .dataTable-dropdown {
+            display: flex;
+            align-items: center;
+
+            label {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    .dataTable-container {
+        @include small {
+            overflow-x: auto;
+            max-width: calc(100vw - 3.2rem);
+        }
+
+        table {
+            @include small {
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            thead {
+                background-color: $color-brand;
+
+                tr {
+                    th {
+                        padding: 2.5rem 0;
+                        font-size: 1.8rem;
+                        text-transform: uppercase;
+                        font-weight: bold;
+
+                        &:first-of-type {
+                            padding-left: 2rem;
+                        }
+
+                        @include small {
+                            padding: 2rem 1rem;
+                        }
+                    }
+                }
+            }
+
+            tbody {
+                tr {
+                    border-bottom: 0.1rem solid $color-brand;
+
+                    td {
+                        padding: 2.5rem 0;
+                        font-size: 1.8rem;
+
+                        &:first-of-type {
+                            padding-left: 2rem;
+                        }
+
+                        @include small {
+                            padding: 2rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

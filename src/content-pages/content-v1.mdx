@@ -1,0 +1,25 @@
+---
+name: Content style v1
+menu: Content Pages
+---
+
+import { Content } from "./content-v1/content-v1";
+import imageUrl from "./content-v1/images/content-style-v1.png";
+import Layout from "../custom-components/custom-playground";
+import css from "raw-loader!./content-v1/css.txt";
+
+# Content style v1
+
+## Used:
+
+- [Viimsikool](https://arendus.wsys.ee/viimsikool/test/)
+
+## Demo
+
+<section class="entry-content">
+  <img src={imageUrl} alt="Image alt" />
+</section>
+
+## SCSS / JS / HTML
+
+<Layout css={<code>{css}</code>}js={<code>none</code>}/>

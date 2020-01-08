@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+$small: 700px !default;
+// $small-larger kasutada ainult koos $orientation-landscape
+$small-larger: 900px !default;
+$medium: 1000px !default;
+$medium-larger: 1200px !default;
+$larger-medium: 1440px !default;
+$larger: 1920px !default;
+
+/// Orientations
+$orientation-landscape: landscape !default;
+
+/// Container's maximum width
+$max-width: 1920px !default;
+$max-width-smaller: 130rem !default;
+
+/// Regular font family
+$font-body: "Roboto", sans-serif !default;
+
+$font-heading: "Roboto", sans-serif !default;
+
+/// Brand colors
+$color-brand: #233a8a !default;
+
+/// Page background color
+$color-bg: #ffffff !default;
+
+/// Text colors
+$color-text: #161a2a !default;
+
+/// Link color
+$color-link: #161a2a !default;
+$color-link-visited: $color-link !default;
+$color-link-hover: $color-link !default;
+
+/// Error color
+$color-error: #f44336 !default;
+
+/// Correct color
+$color-correct: #009f19 !default;
+
+/// More colors
+
+/// White
+$white: #ffffff !default;
+$color-white: #ffffff !default;
+
+/// Black
+$black: #000000 !default;
+$color-black: #000000 !default;
+
+/// Light Gray
+$color-light-gray: lightgray !default;

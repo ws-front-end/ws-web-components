@@ -1,0 +1,26 @@
+---
+name: Table style v1
+menu: Tables
+---
+
+import { Content } from "./table-v1/table-v1";
+import Layout from "../custom-components/custom-playground";
+import imageUrl from "./table-v1/images/table-v1.jpg";
+import css from "raw-loader!./table-v1/css.txt";
+import js from "raw-loader!./table-v1/js.txt";
+
+# Table style v1
+
+## Used:
+
+- [Viimsikool](https://arendus.wsys.ee/viimsikool/test/)
+
+## Demo
+
+<section class="entry-content">
+  <img src={imageUrl} alt="Image alt" />
+</section>
+
+## SCSS / JS / HTML
+
+<Layout css={<code>{css}</code>}js={<code>{js}</code>}html={<code>none</code>}/>

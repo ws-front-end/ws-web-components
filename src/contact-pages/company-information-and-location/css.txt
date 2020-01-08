@@ -1,0 +1,75 @@
+.contact__location {
+  display: grid;
+  grid-template-columns: 0.3fr 0.7fr;
+  margin-bottom: 2rem;
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-brand;
+    color: $color-text;
+    padding: 7.5rem 4rem;
+
+    @include small {
+      padding: 3rem;
+    }
+
+    h4 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      line-height: 1.5;
+      text-transform: uppercase;
+      color: $color-white;
+    }
+
+    ul {
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        a {
+          color: $color-white;
+          font-size: 1.6rem;
+          display: flex;
+          align-self: center;
+          padding: 0.3rem 0;
+          padding-left: 3.5rem;
+          position: relative;
+
+          i {
+            height: 2.2rem;
+            width: 2.2rem;
+            font-size: 2.2rem;
+            text-decoration: none;
+            position: absolute;
+            left: 0rem;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    display: contents;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+
+      @include small {
+        min-height: 20rem;
+      }
+    }
+  }
+}

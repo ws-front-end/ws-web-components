@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+
+/*!
+Theme Name: WS Starter Theme gulp+webpack
+Description:
+Author: Web Systems OÜ
+Author URI: https://www.websystems.ee/
+Version: __WS_THEME_VERSION__
+Text Domain: ws-starter-theme
+*/
+
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/base";
