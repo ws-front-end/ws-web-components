@@ -1,6 +1,6 @@
 # Web Systems UI components library changelog
 
-> Latest version: 1.0.0
+> Latest version: 1.0.1
 
 > npm run dev
 
@@ -15,3 +15,6 @@
   - First push
 
 **1.0.1**
+
+-  Added contact v1
+-  Added footer v1
