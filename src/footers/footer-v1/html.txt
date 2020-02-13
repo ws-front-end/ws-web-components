@@ -1,0 +1,27 @@
+<footer id="colophon" class="site-footer">
+		<div class="site-footer__left">
+  	 <div class="site-footer__left__info">
+  	  <p>2020 EESTI KOORIÜHING</p>
+  		<span>|</span>
+  		<a target="_blank" href="https://goo.gl/maps/zX6oazZN2idLnRWw9">Roosikrantsi 13, 10119 Tallinn</a>
+  		<span>|</span>
+  		<a href="tel:Tel (+372) 627 4451">Tel (+372) 627 4451 &nbsp;</a>
+  		<a href="tel:(+372) 627 4450">(+372) 627 4450</a>
+  		<span>|</span>
+  		<a href="fax:(+372) 627 4459">Faks (+372) 627 4459</a>
+      <span>|</span>
+  		<a href="mailto:kooriyhing@kooriyhing.ee">kooriyhing@kooriyhing.ee</a>
+  	</div>
+  	<div class="site-footer__left__terms">
+  		<a href="https://arendus.wsys.ee/kooriyhing/kasutustingimused/">Kasutustingimused</a>
+  		<span>|</span>
+  		<a href="https://arendus.wsys.ee/kooriyhing/privacy-policy/">Privaatsuspoliitika</a>
+  	</div>
+	</div>
+	<div class="site-footer__right">
+		<a href="http://www.websystems.ee/kodulehe-tegemine" target="_blank">Kodulehe tegemine</a>
+		<a class="site-footer__ws-logo" href="http://www.websystems.ee" target="_blank" title="Web Systems OÜ">
+			<img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/ws-logo.svg" alt="Websystems Logo"></img>
+		</a>
+	</div>
+</footer>

@@ -1,0 +1,74 @@
+@import "../../scss/main.scss";
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.9rem;
+  background-color:$color-white;
+
+  @include medium-larger {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__single {
+    text-align: center;
+
+    img {
+      height: 29rem;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      margin-bottom: 2rem;
+    }
+
+    &__details {
+      ul {
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0.4rem 0;
+
+          header {
+            margin-bottom: 1rem;
+
+            h3 {
+              font-size: 1.6rem;
+              font-weight: bold;
+              color:$color-text;
+            }
+          }
+
+          img {
+            width: auto;
+            height: auto;
+            margin: 0 1rem 0 0;
+          }
+
+          &:nth-of-type(4) {
+            margin-top: 1rem;
+
+            a {
+              text-decoration: underline;
+            }
+
+            &:before {
+              content: '›';
+              margin-right: 0.4rem;
+              color:$color-text;
+            }
+          }
+
+          a {
+            color: $color-text;
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+  }
+}

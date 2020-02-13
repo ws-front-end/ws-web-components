@@ -1,0 +1,94 @@
+---
+name: Contact page v1
+menu: Contact Pages
+---
+
+import { Playground } from "docz";
+import { Content } from "./contact-v1/contact-v1";
+import Layout from "../custom-components/custom-playground";
+import css from "raw-loader!./contact-v1/css.txt";
+
+# Contact style v1.
+
+## Used:
+
+- [Kooriühing](https://arendus.wsys.ee/kooriyhing/kontakt/)
+
+## Demo
+
+<Playground>
+
+<section class="contact">
+	<div class="contact__single">
+    <img src="https://arendus.wsys.ee/kooriyhing/wp-content/uploads/2020/02/banner-bg-1024x319.jpg" alt="Person image"></img>
+    <div class="contact__single__details">
+      <ul>
+        <li>
+          <header>
+            <h3>Test test</h3>
+          </header>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/phone-icon.svg" alt="Phone icon"></img>
+          <a href="tel:56789">56789</a>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/mail-icon.svg" alt="Mail icon"></img>
+          <a href="mailto:test@test.ee">test@test.ee</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+	<div class="contact__single">
+    <img src="https://arendus.wsys.ee/kooriyhing/wp-content/uploads/2020/02/banner-bg-1024x319.jpg" alt="Person image"></img>
+    <div class="contact__single__details">
+      <ul>
+        <li>
+          <header>
+            <h3>Eesnimi Perekonnanimi</h3>
+          </header>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/phone-icon.svg" alt="Phone icon"></img>
+          <a href="tel:+372 123 4567">+372 123 4567</a>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/mail-icon.svg" alt="Mail icon"></img>
+          <a href="mailto:epost@firma.ee">epost@firma.ee</a>
+        </li>
+        <li>
+          <a target="_blank" href="https://arendus.wsys.ee/kooriyhing/wp-content/uploads/2020/02/blank.pdf">vaata CV-d</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="contact__single">
+    <img src="https://arendus.wsys.ee/kooriyhing/wp-content/uploads/2020/02/banner-bg-1024x319.jpg" alt="Person image"></img>
+    <div class="contact__single__details">
+      <ul>
+        <li>
+          <header>
+            <h3>Eesnimi Perekonnanimi</h3>
+          </header>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/phone-icon.svg" alt="Phone icon"></img>
+          <a href="tel:+372 123 4567">+372 123 4567</a>
+        </li>
+        <li>
+          <img src="https://arendus.wsys.ee/kooriyhing/wp-content/themes/kooriyhing/assets/dist/img/svg/mail-icon.svg" alt="Mail icon"></img>
+          <a href="mailto:epost@firma.ee">epost@firma.ee</a>
+        </li>
+        <li>
+          <a target="_blank" href="/kooriyhing/wp-content/uploads/2020/02/blank.pdf">vaata CV-d</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</Playground>
+
+## SCSS / JS / HTML
+
+<Layout css={<code>{css}</code>}js={<code>none</code>}/>

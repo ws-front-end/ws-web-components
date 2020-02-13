@@ -1,0 +1,26 @@
+---
+name: Footer style v1
+menu: Footers
+---
+
+import { Content } from "./footer-v1/footer-v1";
+import Layout from "../custom-components/custom-playground";
+import imageUrl from "./footer-v1/images/footer-v1.png";
+import html from "raw-loader!./footer-v1/html.txt";
+import css from "raw-loader!./footer-v1/css.txt";
+
+# Footer style v1
+
+## Used:
+
+- [Kooriühing](https://arendus.wsys.ee/kooriyhing/)
+
+## Demo
+
+<section class="entry-content">
+  <img src={imageUrl} alt="Image alt" />
+</section>
+
+## SCSS / JS / HTML
+
+<Layout css={<code>{css}</code>}js={<code>none</code>}html={<code>{html}</code>}/>
